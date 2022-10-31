@@ -1,0 +1,19 @@
+{
+  "name": "BackendApi",
+  "version": "1.0.0",
+  "description": "Backend API for the APDS POE task 2",
+  "main": "server.js",
+  "license": "UNLICENSE",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.1",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,218 @@
+### Users ###
+
+###
+POST https://localhost:3000/api/user/register HTTP/1.1
+content-type: application/json
+
+{
+    "email": "test@example1.com",
+    "password": "test1"
+}
+###
+POST https://localhost:3000/api/user/login HTTP/1.1
+content-type: application/json
+
+{
+  "email": "test1@example1.com",
+  "password": "test1"
+}
+### admin or developer only
+PUT https://localhost:3000/api/user/update/6332ab2420ccb617b0c609a7 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{
+            "email": "test1@example1.com",
+            "password": "test1",
+            "role": "user"
+}
+### admin or developer only
+DELETE https://localhost:3000/api/user/delete/6332aa1d8e67f33b85a0f850 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+### admin or developer only
+GET https://localhost:3000/api/user/get/6332aa1d8e67f33b85a0f850 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+### admin or developer only
+GET https://localhost:3000/api/user/get HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### BOARDS ###
+
+###
+POST https://localhost:3000/api/board/create HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{
+  "name": "test",
+  "description": "description example"
+}
+###
+
+###
+PUT https://localhost:3000/api/board/update/6332b0b0c0c0c0c0c0c0c0c0 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{
+  "name": "test",
+  "description": "description example"
+}
+###
+
+###
+GET https://localhost:3000/api/board/6332b0b0c0c0c0c0c0c0c0c0 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Admin only
+GET https://localhost:3000/api/board/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Owner or admin only
+DELETE https://localhost:3000/api/board/delete/6332b0b0c0c0c0c0c0c0c0c0 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+
+### Owner or admin only
+PUT https://localhost:3000/api/board/:boardId/add-user/:userId
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Owner or admin only
+PUT https://localhost:3000/api/board/:boardId/remove-user/:userId
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Cards ###
+
+### Board owner, admin or board member only
+POST https://localhost:3000/api/card/create-todo HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{
+  "title": "test",
+  "description": "description example",
+  "board": "6332b0b0c0c0c0c0c0c0c0c0"
+}
+###
+
+### Board owner, admin or board member only
+POST https://localhost:3000/api/card/create-doing HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{
+  "title": "test",
+  "description": "description example",
+  "board": "6332b0b0c0c0c0c0c0c0c0c0"
+}
+###
+
+### Board owner, admin or board member only
+POST https://localhost:3000/api/card/create-done HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{
+  "title": "test",
+  "description": "description example",
+  "board": "6332b0b0c0c0c0c0c0c0c0c0"
+}
+###
+
+### Board owner, admin or board member only
+PUT https://localhost:3000/api/card/:cardId/move-to-doing HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Board owner, admin or board member only
+PUT https://localhost:3000/api/card/:cardId/move-to-done HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Board owner, admin or board member only
+PUT https://localhost:3000/api/card/:cardId/move-to-todo HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Board owner, admin or board member only
+GET https://localhost:3000/api/card/:cardId HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Admin only
+GET https://localhost:3000/api/card/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Board owner, admin or board member only
+DELETE https://localhost:3000/api/card/:cardId HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{}
+###
+
+### Board owner, admin or board member only
+PUT https://localhost:3000/api/card/:cardId/add-member HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{
+  "memberId": "adasdasdasdasd"
+}
+###
+
+### Board owner, admin or board member only
+PUT https://localhost:3000/api/card/:cardId/remove-member HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0MUBleGFtcGxlMS5jb20iLCJ1c2VySWQiOiI2MzMyYWIyNDIwY2NiNjE3YjBjNjA5YTciLCJ1c2VyUm9sZSI6InVzZXIiLCJpYXQiOjE2NjQyNjU2NzQsImV4cCI6MTY2NDI2OTI3NH0.5TFrYKuGWwbU7131wKgrQe-7UcHwoBQb3EdI3Ovr3A8
+
+{
+  "memberId": "adasdasdasdasd"
+}
+###
